@@ -1,4 +1,4 @@
-package arrayMethods;
+import java.util.Arrays;
 
 public class SortingAlgorithm 
 {
@@ -65,5 +65,28 @@ public class SortingAlgorithm
 		}
 		
 	}
+	
+	public static String[] merge(String[] list1)
+	{
+		if (list1.length <=1 )
+		{
+			return list1;
+		}
+		String left[] = Arrays.copyOfRange(list1,0,1 - list1.length/2);
+		String right[] = Arrays.copyOfRange(list1, 1 - list1.length/2, list1.length - 1);
+		
+		return helphelp.merge(merge(left), merge(right));
+	}
+	
+	public static void quickSort(int[] list1, int front, int back)
+	{
+		if (back > front)
+		{
+			int pivotIndex = helphelp.partition(list1, front, back);
+			quickSort(list1, front, pivotIndex-1);
+			quickSort(list1, pivotIndex+1, back);
+		}	
+	}
+	
 }
 
