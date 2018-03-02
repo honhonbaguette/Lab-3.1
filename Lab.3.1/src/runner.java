@@ -9,6 +9,7 @@ public class runner
 		int[] test1 = {1,4,4,5,2,4,3,17,0};
 		double[] test2 = {1.1, 4.1, 4.2, 5.0, 2.0, 4.0, 17.0, 0.0};
 		String[] test3 = {"zebra", "tortilla", "abba", "foo", "bar", "aba"};
+		String[] mergeTest = {"gate","boo", "donut", "zebra", "apple","chick", "as", "tortilla", "think", "lose"};
 		
 		//Insertion  
 		long start= System.nanoTime();
@@ -30,7 +31,12 @@ public class runner
 		System.out.println("Test3 took: " + time + "nanoseconds");		
 		
 		//Merge
-		
+		start = System.nanoTime();
+		String[] mergeFinal = SortingAlgorithm.merge(mergeTest);
+		end = System.nanoTime();
+		time = end - start;
+		System.out.println("Merge took: " + time + "nanoseconds");
+		System.out.println(Arrays.toString(mergeFinal) + "\n");
 		//Partition
 		
 		//
