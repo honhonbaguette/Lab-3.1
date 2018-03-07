@@ -1,6 +1,6 @@
 
 
-public class MethodSwaping 
+public class methodSwaping 
 {
 	public static void swap(int[] elements, int index1, int index2)
 	{
@@ -22,5 +22,6 @@ public class MethodSwaping
 		 elements[index1]=elements[index2];
 		 elements[index2]=temp;
 	}
+	
 }
 
